@@ -26,3 +26,24 @@ form input {
 }
 
 /* solution styles */
+#check {
+    visibility: hidden;
+}
+
+#check.green { 
+    visibility: visible;
+    color: hsl(84, 93%, 38%);
+    animation: moveCheck ease-in 0.3s;
+}
+
+input.green {
+    border: 1px solid hsl(84, 93%, 38%);
+    outline: 1px solid hsl(84, 93%, 38%);
+}
+
+
+
+@keyframes moveCheck {
+    0% { opacity: 0; transform: translateY(5px);}
+    100% { opacity: 1; transform: translateY(0px);}
+}
